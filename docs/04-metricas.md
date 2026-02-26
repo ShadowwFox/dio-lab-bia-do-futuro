@@ -12,8 +12,6 @@
 
 ## Exemplos de Cenários de Teste
 
-Crie testes simples para validar seu agente:
-
 ### Teste 1: Consulta de gastos
 - **Pergunta:** "Quanto gastei com alimentação?"
 - **Resposta esperada:** Valor agregado da categoria alimentação conforme transacoes.csv
@@ -37,8 +35,6 @@ Crie testes simples para validar seu agente:
 ---
 
 ## Resultados
-
-Após os testes, registre suas conclusões:
 
 **O que funcionou bem:**
 - [Interpretação de perguntas naturais sobre gastos e objetivos.
