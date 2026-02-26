@@ -1,4 +1,4 @@
-Agente Financeiro Conversacional
+## Agente Financeiro Conversacional
 
 Protótipo de agente financeiro baseado em LLM capaz de analisar dados estruturados do cliente, responder perguntas em linguagem natural e apoiar organização financeira pessoal.
 
