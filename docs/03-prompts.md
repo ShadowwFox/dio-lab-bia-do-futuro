@@ -136,7 +136,5 @@ REGRAS:
 
 ## Observações e Aprendizados
 
-> Registre aqui ajustes que você fez nos prompts e por quê.
-
 - [A inclusão explícita de estratégia de resposta reduziu ambiguidades comportamentais do agente.]
 - [Few-shot com perguntas comuns ajudou a estabilizar padrão de análise em vez de respostas genéricas.]
