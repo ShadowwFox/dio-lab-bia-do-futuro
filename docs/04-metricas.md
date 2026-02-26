@@ -5,11 +5,8 @@
 | Métrica | O que avalia | Exemplo de teste |
 |---------|--------------|------------------|
 | **Assertividade** | Capacidade de responder exatamente o que foi perguntado usando os dados disponíveis | Perguntar saldo ou gasto por categoria e verificar valor correto |
-| **Segurança** | O agente evitou inventar informações? | Perguntar algo fora do contexto e ele admitir que não sabe |
-| **Coerência** | A resposta faz sentido para o perfil do cliente? | Sugerir investimento conservador para cliente conservador |
-
-> [!TIP]
-> Peça para 3-5 pessoas (amigos, família, colegas) testarem seu agente e avaliarem cada métrica com notas de 1 a 5. Isso torna suas métricas mais confiáveis! Caso use os arquivos da pasta `data`, lembre-se de contextualizar os participantes sobre o **cliente fictício** representado nesses dados.
+| **Segurança** | Capacidade de evitar alucinação e reconhecer limites | Pergunta fora do contexto ou sobre dado inexistente |
+| **Coerência** | Alinhamento da resposta com perfil e objetivos do cliente | Sugestão de produto compatível com perfil moderado |
 
 ---
 
@@ -19,23 +16,23 @@ Crie testes simples para validar seu agente:
 
 ### Teste 1: Consulta de gastos
 - **Pergunta:** "Quanto gastei com alimentação?"
-- **Resposta esperada:** Valor baseado no `transacoes.csv`
-- **Resultado:** [ ] Correto  [ ] Incorreto
+- **Resposta esperada:** Valor agregado da categoria alimentação conforme transacoes.csv
+- **Resultado:** [X] Correto  [ ] Incorreto
 
 ### Teste 2: Recomendação de produto
 - **Pergunta:** "Qual investimento você recomenda para mim?"
-- **Resposta esperada:** Produto compatível com o perfil do cliente
-- **Resultado:** [ ] Correto  [ ] Incorreto
+- **Resposta esperada:** Sugestão compatível com perfil moderado e objetivo de reserva
+- **Resultado:** [X] Correto  [ ] Incorreto
 
 ### Teste 3: Pergunta fora do escopo
 - **Pergunta:** "Qual a previsão do tempo?"
-- **Resposta esperada:** Agente informa que só trata de finanças
-- **Resultado:** [ ] Correto  [ ] Incorreto
+- **Resposta esperada:** Redirecionamento informando escopo financeiro
+- **Resultado:** [X] Correto  [ ] Incorreto
 
 ### Teste 4: Informação inexistente
 - **Pergunta:** "Quanto rende o produto XYZ?"
-- **Resposta esperada:** Agente admite não ter essa informação
-- **Resultado:** [ ] Correto  [ ] Incorreto
+- **Resposta esperada:** Reconhecimento de ausência de informação na base
+- **Resultado:** [X] Correto  [ ] Incorreto
 
 ---
 
@@ -44,19 +41,29 @@ Crie testes simples para validar seu agente:
 Após os testes, registre suas conclusões:
 
 **O que funcionou bem:**
-- [Liste aqui]
+- [Interpretação de perguntas naturais sobre gastos e objetivos.
+Uso consistente do perfil do cliente para contextualizar respostas.
+Comportamento seguro diante de perguntas fora do escopo.
+Explicações claras sobre dados financeiros disponíveis.]
 
 **O que pode melhorar:**
-- [Liste aqui]
+- [Precisão em perguntas mais abertas sobre estratégia financeira.
+Redução de verbosidade em respostas simples.
+Melhor priorização de produtos quando múltiplas opções são válidas.
+Memória conversacional mais robusta entre interações.]
 
 ---
 
 ## Métricas Avançadas (Opcional)
 
-Para quem quer explorar mais, algumas métricas técnicas de observabilidade também podem fazer parte da sua solução, como:
+Para observabilidade adicional, podem ser acompanhados:
 
-- Latência e tempo de resposta;
-- Consumo de tokens e custos;
+Latência: tempo médio entre pergunta e resposta do modelo local.
+Taxa de erro: falhas na geração ou carregamento de dados.
+Uso computacional: consumo de memória durante inferência local.
+Logs de interação: registro de perguntas para análise posterior.
+
+Ferramentas como LangWatch e LangFuse podem ser utilizadas para monitoramento mais avançado em cenários futuros.
 - Logs e taxa de erros.
 
 Ferramentas especializadas em LLMs, como [LangWatch](https://langwatch.ai/) e [LangFuse](https://langfuse.com/), são exemplos que podem ajudar nesse monitoramento. Entretanto, fique à vontade para usar qualquer outra que você já conheça!
