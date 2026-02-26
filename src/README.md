@@ -145,12 +145,16 @@ for autor, mensagem in st.session_state.historico:
 
 ## Como Rodar
 
+```
 1️⃣ Instalar Ollama
 https://ollama.com/
+
 2️⃣ Baixar modelo
 ollama pull llama3.2:3b
+
 3️⃣ Instalar dependências
 pip install -r requirements.txt
+
 4️⃣ Rodar aplicação
 streamlit run app.py
 ```
