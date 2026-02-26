@@ -6,13 +6,10 @@ Descreva se usou os arquivos da pasta `data`, por exemplo:
 
 | Arquivo | Formato | Utilização no Agente |
 |---------|---------|---------------------|
-| `historico_atendimento.csv` | CSV | Contextualizar interações anteriores |
-| `perfil_investidor.json` | JSON | Personalizar recomendações |
-| `produtos_financeiros.json` | JSON | Sugerir produtos adequados ao perfil |
-| `transacoes.csv` | CSV | Analisar padrão de gastos do cliente |
-
-> [!TIP]
-> **Quer um dataset mais robusto?** Você pode utilizar datasets públicos do [Hugging Face](https://huggingface.co/datasets) relacionados a finanças, desde que sejam adequados ao contexto do desafio.
+| `historico_atendimento.csv` | CSV | Permite ao agente recuperar interações anteriores do cliente, evitar repetição de explicações e manter continuidade do atendimento |
+| `perfil_investidor.json` | JSON | Define características do cliente (perfil, renda, objetivos e tolerância a risco), servindo como base para personalização das respostas |
+| `produtos_financeiros.json` | JSON | Catálogo de produtos disponíveis com risco, rentabilidade e indicação de uso, permitindo ao agente sugerir opções compatíveis com o perfil |
+| `transacoes.csv` | CSV | Histórico financeiro do cliente usado para análise de padrão de gastos, cálculo de saldo e identificação de comportamento financeiro |
 
 ---
 
@@ -58,21 +55,33 @@ Contexto Financeiro Atual do Cliente
 
 Dados do Cliente:
 Nome: João Silva
+
 Perfil financeiro: Moderado
+
 Renda média mensal: R$ 7.000
+
 Saldo disponível atual: R$ 5.000
+
 Comprometimento da renda: 62%
 
 Resumo do mês atual:
+
 Total gasto até agora: R$ 4.320
+
 Categoria com maior despesa: Alimentação (R$ 1.150)
+
 Despesas recorrentes identificadas: Streaming, Aluguel, Academia
 
 Últimas transações:
+
 01/11: Supermercado – R$ 450 – Categoria: Alimentação
+
 03/11: Streaming – R$ 55 – Categoria: Assinatura
+
 05/11: Restaurante – R$ 120 – Categoria: Alimentação
+
 07/11: Combustível – R$ 300 – Categoria: Transporte
 
 Meta declarada:
+
 Formar reserva de emergência de R$ 20.000
