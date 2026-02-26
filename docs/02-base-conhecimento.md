@@ -2,8 +2,6 @@
 
 ## Dados Utilizados
 
-Descreva se usou os arquivos da pasta `data`, por exemplo:
-
 | Arquivo | Formato | Utilização no Agente |
 |---------|---------|---------------------|
 | `historico_atendimento.csv` | CSV | Permite ao agente recuperar interações anteriores do cliente, evitar repetição de explicações e manter continuidade do atendimento |
